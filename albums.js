@@ -1,4 +1,4 @@
-{
+export const data = {
   "albums": [
     {
       "album_title": "Count Bateman",

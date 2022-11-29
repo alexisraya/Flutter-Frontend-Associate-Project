@@ -1,15 +1,14 @@
-import {mockFetchHelper} from './mock_api.js';
-import data from './albums.json' assert {type: 'json'};
+import {mockFetchHelper}  from './mock_api.js';
+import {data} from './albums.js';
 
-window.onload() = async function (){
-    // console.log(mockFetchHelper(returnValue));
-    const response = await fetch('url(./albums.json)', {
-        method: 'POST',
-        body: data, // string or object
-        headers: {
-        'Content-Type': 'application/json'
-        }
+const fecthAlbums = () => {
+    mockFetchHelper(true, data).then((response) => {
+        console.log("hi");
+        console.log(response);
     });
-    const myJson = await response.json(); //extract JSON from the http response
-    // do something with myJson
+};
+
+window.onload = () => {
+    console.log(mockFetchHelper(true, data));
+    fecthAlbums();
 }
