@@ -57,7 +57,7 @@ const fillCell = (albumItem) => {
     }
 };
 
-// formate last played data into a date
+// format last played data into a date
 const formatLastPlayed = (albumPlayedDate) => {
     if (albumPlayedDate == null){
         return ("--");
@@ -80,6 +80,7 @@ const formatLastPlayed = (albumPlayedDate) => {
     
 }
 
+// formate release date to MM/DD/YYYY
 const formatReleaseDate = (albumReleaseDate) => {
     let date = new Date(albumReleaseDate);
     let month = date.getMonth() + 1;
